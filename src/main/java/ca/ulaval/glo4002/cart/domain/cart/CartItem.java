@@ -20,6 +20,6 @@ public class CartItem {
 	public CartItem(String name, int quantity, int totalPrice) {
 		this.name = name;
 		this.quantity = quantity;
-        this.totalPrice = totalPrice;
+		this.totalPrice = totalPrice;
     }
 }

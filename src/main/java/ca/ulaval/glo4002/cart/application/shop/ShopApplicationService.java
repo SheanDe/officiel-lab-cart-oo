@@ -4,6 +4,7 @@ import java.util.List;
 import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
+import ca.ulaval.glo4002.cart.domain.shop.FragileShopItem;
 import ca.ulaval.glo4002.cart.domain.shop.PrimeShopItem;
 import ca.ulaval.glo4002.cart.domain.shop.ShopItem;
 import ca.ulaval.glo4002.cart.domain.shop.StandardShopItem;
@@ -34,6 +35,7 @@ public class ShopApplicationService {
     }
 
     private void prefillDemoData() {
+        addItem(new FragileShopItem("51-15152", "Fragile", 4, 6, 1.40, true));
         addItem(new StandardShopItem("1251521", "Peanuts", 5, 1, 1.20, true));
         addItem(new PrimeShopItem("236637", "Clean Code", 35, 2, 0.50, false));
         addItem(new StandardShopItem("235265", "Détendeur Mares Abyss Navy 22", 999, 5, 0.15, true));

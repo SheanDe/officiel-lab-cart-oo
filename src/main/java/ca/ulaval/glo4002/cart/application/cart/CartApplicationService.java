@@ -33,13 +33,7 @@ public class CartApplicationService {
 	}
 
     private int getItemPriceWithShipping(ShopItem item) {
-        int totalPrice = item.getPrice();
-
-        if (!item.isPrime()) {
-            totalPrice += item.getWeight() * SHIPPING_PRICE_PER_KG;
-        }
-
-        return totalPrice;
+        return item.getPrice();
     }
 
     private Cart getCartByOwner(String email, List<Cart> carts) {

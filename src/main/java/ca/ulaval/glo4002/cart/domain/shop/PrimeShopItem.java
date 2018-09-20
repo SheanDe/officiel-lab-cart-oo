@@ -6,6 +6,8 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class PrimeShopItem extends ShopItem {
 
+    private static final float SHIPPING_PRICE_PER_KG = 2;
+
     @XmlElement
     @JsonProperty
     private String itemSku;
@@ -62,7 +64,7 @@ public class PrimeShopItem extends ShopItem {
 
     @Override
     public int getPrice() {
-        return price;
+        return (int) (SHIPPING_PRICE_PER_KG * weight + price);
     }
 
     @Override
